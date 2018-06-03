@@ -13,6 +13,11 @@
 
 Route::get('/about', function () {
 //    return view('welcome');
-    $name = 'jelly';
-    return view('sites.about')->with('name',$name);
+    $name = ['jelly', 'name2', 'name3', 'name4',];
+    return view('sites.about')->with('people', $name);
+});
+
+
+Route::group(['prefix' => 'web'], function () {
+    Route::get("/index", "web\jumpController@index");
 });

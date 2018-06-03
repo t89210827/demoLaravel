@@ -3,8 +3,8 @@
 <head>
     <title>Laravel.com</title>
 </head>
-    <body>
-    @yield('content')
-    <div>111111111111</div>
-    </body>
+<body>
+@yield('content')
+{{--<div>我是app.blade.php</div>--}}
+</body>
 </html>
