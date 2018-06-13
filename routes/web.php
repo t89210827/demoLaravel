@@ -20,4 +20,7 @@ Route::get('/about', function () {
 
 Route::group(['prefix' => 'web'], function () {
     Route::get("/index", "web\jumpController@index");
+    Route::get("/returnUser", "web\jumpController@returnUser");
+    Route::get("/returnParam/{id}", "web\jumpController@returnParam");
+    Route::get("/from", "web\jumpController@from");
 });

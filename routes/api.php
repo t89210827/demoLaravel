@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => ''], function () {
+    //获取首页轮播图
+    Route::get('ad/getADs', 'API\recommendController@getADs');
+});
