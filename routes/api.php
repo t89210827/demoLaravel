@@ -19,5 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => ''], function () {
     //获取首页轮播图
-    Route::get('ad/getADs', 'API\recommendController@getADs');
+    Route::get('ad/getADs', 'api\recommendController@getADs');
 });

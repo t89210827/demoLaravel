@@ -26,8 +26,8 @@ class ADManager
      */
     public static function getADs($status)
     {
+        dd(json_encode($status));
         $ads = AD::wherein('status', $status)->orderby('sort', 'asc')->get();
-        dd(json_encode($ads));
         return $ads;
     }
 
